@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Payment</title>
+</head>
+<body>
+  <h1>Payment for <%= ref %> (amount: <%= amount %>)</h1>
+  <label for="operator">Choose operator:</label>
+  <select id="operator">
+    <% operators.forEach(function(op){ %>
+      <option value="<%= op %>"><%= op %></option>
+    <% }); %>
+  </select>
+
+  <p>
+    <a id="ussdLink" href="#">USSD Link</a>
+    <button id="copyBtn" type="button">Copy</button>
+  </p>
+
+  <script>
+    const ussdLinks = <%- JSON.stringify(ussdLinks) %>;
+    const ussdStrings = <%- JSON.stringify(ussdStrings) %>;
+    const select = document.getElementById('operator');
+    const link = document.getElementById('ussdLink');
+    const copy = document.getElementById('copyBtn');
+
+    function update() {
+      const op = select.value;
+      link.href = ussdLinks[op];
+      link.textContent = ussdStrings[op];
+    }
+    select.addEventListener('change', update);
+    update();
+
+    copy.addEventListener('click', function() {
+      const op = select.value;
+      const str = ussdStrings[op];
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(str);
+      }
+    });
+  </script>
+</body>
+</html>
