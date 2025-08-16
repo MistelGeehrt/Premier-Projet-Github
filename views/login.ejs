@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/style.css"><title>Connexion</title></head>
+<body><header><h1>Connexion</h1></header>
+<div class="container">
+<% if (typeof error !== 'undefined'){ %><p style="color:red"><%=error%></p><% } %>
+<form method="post">
+<input name="phone" placeholder="Téléphone" required>
+<input name="password" type="password" placeholder="Mot de passe" required>
+<button type="submit">Entrer</button>
+</form>
+<p><a href="/register">Créer un compte</a></p>
+</div></body></html>

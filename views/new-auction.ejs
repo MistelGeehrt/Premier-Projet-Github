@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/css/style.css"><title>Nouvelle enchère</title></head>
+<body><header><h1>Créer une enchère</h1></header>
+<div class="container">
+<form method="post">
+<input name="title" placeholder="Titre" required>
+<textarea name="description" placeholder="Description" required></textarea>
+<input name="start_price" type="number" placeholder="Prix de départ" required>
+<input name="reserve_price" type="number" placeholder="Prix plancher" required>
+<input name="buy_now_price" type="number" placeholder="Prix achat immédiat (optionnel)">
+<select name="duration">
+<option value="24h">24h</option>
+<option value="48h">48h</option>
+<option value="72h">72h</option>
+<option value="7d">7 jours</option>
+</select>
+<button type="submit">Publier</button>
+</form>
+</div></body></html>

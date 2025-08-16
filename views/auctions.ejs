@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/css/style.css"><title>Enchères</title></head>
+<body>
+<header><h1>Toutes les enchères</h1></header>
+<div class="container">
+<div class="nav"><a href="/">Accueil</a><% if(user){ %><a href="/auction/new">Vendre</a><a href="/profile">Profil</a><a href="/logout">Déconnexion</a><% }else{ %><a href="/login">Connexion</a><% } %></div>
+<div class="grid">
+<% auctions.forEach(a=>{ %>
+<div class="card">
+<h3><%=a.title%></h3>
+<p>Prix actuel: <%=a.current_price%> FCFA</p>
+<% if(a.buy_now_price){ %><p>Achat immédiat: <%=a.buy_now_price%> FCFA</p><% } %>
+<p>Fin: <span id="c<%=a.id%>"></span></p>
+<a href="/auction/<%=a.id%>"><button>Enchérir</button></a>
+<% if(a.buy_now_price){ %><form method="post" action="/auction/<%=a.id%>/buy"><button class="buy">Acheter maintenant</button></form><% } %>
+<script>startCountdown('c<%=a.id%>','<%=a.end_at%>');</script>
+</div>
+<% }) %>
+</div>
+</div>
+<script src="/js/app.js"></script>
+</body></html>

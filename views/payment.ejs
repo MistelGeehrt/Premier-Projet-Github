@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/css/style.css"><title>Paiement</title></head>
+<body>
+<header><h1>Payer <%=auction.title%></h1></header>
+<div class="container">
+<form method="post">
+<select name="operator">
+<option value="MTN">MTN Mobile Money</option>
+<option value="Orange">Orange Money</option>
+</select>
+<button type="submit">J'ai payé</button>
+</form>
+<p>Code USSD: <%= auction.current_price %> FCFA</p>
+</div>
+</body></html>
