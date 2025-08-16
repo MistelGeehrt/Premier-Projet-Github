@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample Form</title>
+  </head>
+  <body>
+    <% if (messages && messages.length) { %>
+      <div class="flash">
+        <% messages.forEach(function(msg){ %>
+          <p><%= msg %></p>
+        <% }); %>
+      </div>
+    <% } %>
+    <form action="/submit" method="POST">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
