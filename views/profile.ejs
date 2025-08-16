@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/css/style.css"><title>Profil</title></head>
+<body><header><h1>Mon profil</h1></header>
+<div class="container">
+<h2>Mes enchères</h2>
+<ul>
+<% myAuctions.forEach(a=>{ %><li><%=a.title%> - <%=a.status%></li><% }) %>
+</ul>
+<h2>Mes offres</h2>
+<ul>
+<% myBids.forEach(b=>{ %><li><%=b.title%> : <%=b.amount%> FCFA</li><% }) %>
+</ul>
+<h2>Gagnées</h2>
+<ul>
+<% wins.forEach(w=>{ %><li><%=w.title%> - <a href="/payment/<%=w.id%>">Payer</a></li><% }) %>
+</ul>
+</div></body></html>

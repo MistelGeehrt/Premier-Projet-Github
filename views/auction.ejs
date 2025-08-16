@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/css/style.css"><title><%=auction.title%></title></head>
+<body>
+<header><h1><%=auction.title%></h1></header>
+<div class="container">
+<p><%=auction.desc%></p>
+<p>Prix actuel: <%=auction.current_price%> FCFA</p>
+<p>Fin: <span id="count"></span></p>
+<% if(auction.buy_now_price){ %><form method="post" action="/auction/<%=auction.id%>/buy"><button class="buy">Acheter maintenant <%=auction.buy_now_price%> FCFA</button></form><% } %>
+<% if(error){ %><p style="color:red"><%=error%></p><% } %>
+<form method="post" action="/auction/<%=auction.id%>/bid">
+<input name="amount" type="number" placeholder="Votre offre">
+<button>Enchérir</button>
+</form>
+<h3>Historique</h3>
+<ul>
+<% bids.forEach(b=>{ %><li><%=b.name%>: <%=b.amount%> FCFA</li><% }) %>
+</ul>
+</div>
+<script src="/js/app.js"></script>
+<script>startCountdown('count','<%=auction.end_at%>');</script>
+</body></html>
