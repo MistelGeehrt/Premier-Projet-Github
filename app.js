@@ -5,6 +5,7 @@ const flash = require('connect-flash');
 const csrf = require('csurf');
 const { ensureAuth } = require('./middleware/auth');
 const ussdCodes = require('./config/ussd.json');
+const db = require('./src/db');
 
 const app = express();
 
@@ -70,8 +71,10 @@ app.get('/payment/:auctionId', ensureAuth, (req, res) => {
 });
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+db.init().then(() => {
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
 });
 
 module.exports = app;

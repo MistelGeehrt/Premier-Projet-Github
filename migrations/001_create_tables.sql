@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS auctions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    description TEXT NOT NULL,
+    user_id INTEGER NOT NULL,
+    category TEXT,
+    start_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    end_at DATETIME NOT NULL,
+    status TEXT CHECK(status IN ('pending','active','closed')) NOT NULL DEFAULT 'pending'
+);
+
+CREATE TABLE IF NOT EXISTS bids (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    auction_id INTEGER NOT NULL REFERENCES auctions(id) ON DELETE CASCADE,
+    user_id INTEGER NOT NULL,
+    amount REAL NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
