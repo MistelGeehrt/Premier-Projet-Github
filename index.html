@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mistel Geehrt – Automatisation & IA qui font vendre</title>
+
+  <!-- Description: garder UTF-8 ; seul le signe < doit être échappé -->
+  <meta name="description" content="Automatisations sur mesure, assistants IA, social media et sites WordPress. 140+ clients, 60+ automatisations, réponse &lt; 24 h. Demandez votre devis.">
+
+  <!-- Canonical & Social -->
+  <link rel="canonical" href="https://mistelgeehrt.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mistelgeehrt.com/">
+  <meta property="og:title" content="Mistel Geehrt – Automatisation & IA qui font vendre">
+  <meta property="og:description" content="Automatisations sur mesure, assistants IA, social media et sites WordPress. 140+ clients, 60+ automatisations, réponse &lt; 24 h.">
+  <meta property="og:image" content="https://mistelgeehrt.com/wp-content/uploads/2025/08/ChatGPT-Image-11-aout-2025-17_4gdg7_00.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mistel Geehrt – Automatisation & IA qui font vendre">
+  <meta name="twitter:description" content="Automatisations sur mesure, assistants IA, social media et sites WordPress. 140+ clients, 60+ automatisations, réponse &lt; 24 h.">
+  <meta name="twitter:image" content="https://mistelgeehrt.com/wp-content/uploads/2025/08/ChatGPT-Image-11-aout-2025-17_4gdg7_00.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
+      --bg:#F7FBFF; --surface:#FFFFFF; --line:rgba(9,32,77,.10);
+      --text:#0B1220; --muted:#475569;
+      --brand1:#1FA2FF; --brand2:#12D8FA; --brand3:#A6FFCB;
+      --grad: linear-gradient(135deg,var(--brand1),var(--brand2) 40%,var(--brand3));
+      --r-sm:10px; --r-md:14px; --r-lg:18px; --r-full:9999px;
+      --shadow-sm:0 2px 8px rgba(2,12,32,.08);
+      --shadow:0 12px 40px rgba(2,12,32,.08);
+      --shadow-lg:0 16px 48px rgba(2,12,32,.15);
+      --t-fast:150ms cubic-bezier(.21,1,.81,1);
+      --t-med:300ms cubic-bezier(.21,1,.81,1);
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%;max-width:100%;overflow-x:hidden}
+    body{
+      margin:0;font-family:var(--font);color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(31,162,255,.20) 0%, transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, rgba(18,216,250,.18) 0%, transparent 55%),
+        conic-gradient(from 220deg at 70% -20%, rgba(166,255,203,.18), rgba(18,216,250,.12), rgba(255,255,255,0)),
+        var(--bg);
+      -webkit-tap-highlight-color: transparent;
+    }
+    img,svg,video,canvas,iframe,embed,object{max-width:100%;height:auto;display:block}
+    a{color:#0b3a84;text-decoration:none;transition:color var(--t-fast)}
+    a:hover{color:#072a62;text-decoration:underline}
+    .container{width:min(1200px,92vw);margin-inline:auto}
+    section{padding:clamp(56px,8vw,80px) 0;scroll-margin-top:84px}
+    .muted{color:var(--muted)} .skip{position:absolute;left:-9999px}
+    .skip:focus{left:6px;top:6px;background:#fff;padding:.5rem 1rem;border-radius:10px;z-index:1000}
+
+    /* HEADER */
+    header.nav{
+      position:sticky;top:0;z-index:40;backdrop-filter:saturate(140%) blur(8px);
+      background:linear-gradient(90deg,rgba(255,255,255,.75),rgba(255,255,255,.55));
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;position:relative}
+    .brand{display:flex;align-items:center;gap:.7rem;font-weight:800;letter-spacing:.2px;color:#0b1d38}
+    .brand-logo-img{height:34px;width:auto;object-fit:contain}
+    .right-tools{display:flex;align-items:center;gap:.6rem}
+
+    .primary-nav{display:flex;align-items:center;gap:.2rem}
+    .primary-nav a{color:#0b1d38;font-weight:700;margin-left:1rem;padding:.45rem .7rem;border-radius:10px}
+    .primary-nav a:hover{background:rgba(11,29,56,.06);text-decoration:none}
+
+    .nav-toggle{
+      display:none;appearance:none;background:#fff;border:1px solid var(--line);
+      box-shadow:var(--shadow-sm);border-radius:10px;padding:.5rem;line-height:0
+    }
+    .nav-toggle svg{width:22px;height:22px}
+
+    /* Lang switcher */
+    .lang-switcher{display:inline-flex;border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:var(--shadow-sm);overflow:hidden}
+    .lang-btn{padding:.4rem .6rem;font-weight:800;font-size:.88rem;border:0;background:#fff;cursor:pointer}
+    .lang-btn[aria-pressed="true"]{background:var(--grad);color:#0b1220}
+    .lang-btn:focus-visible{outline:3px solid rgba(31,162,255,.35)}
+
+    @media (max-width:960px){
+      .nav-toggle{display:inline-flex;align-items:center;justify-content:center}
+      .primary-nav{
+        position:absolute;left:0;right:0;top:calc(100% + 8px);
+        display:none;flex-direction:column;gap:0;
+        background:linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.94));
+        border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden
+      }
+      .primary-nav.open{display:flex}
+      .primary-nav a{margin:0;padding:.9rem 1.2rem;width:100%;border-radius:0}
+      .primary-nav a + a{border-top:1px solid var(--line)}
+      body.nav-open{overflow:hidden}
+    }
+
+    /* HERO */
+    .hero{
+      position:relative;isolation:isolate;
+      background:
+        radial-gradient(1000px 700px at 20% -20%, rgba(31,162,255,.22) 0%, rgba(255,255,255,0) 60%),
+        radial-gradient(800px 600px at 100% 0%, rgba(18,216,250,.18) 0%, rgba(255,255,255,0) 58%),
+        linear-gradient(180deg,#FFFFFF 0%,#F7FBFF 100%);
+      border-bottom:1px solid var(--line);
+      padding:clamp(64px,8vw,110px) 0 clamp(52px,7vw,72px);
+      overflow:hidden;
+    }
+    .hero-blob{pointer-events:none;position:absolute;right:-12vw;bottom:-40vw;width:85vw;height:85vw;max-width:1000px;filter:blur(70px);opacity:.25;background:conic-gradient(from 200deg,var(--brand1),var(--brand2),var(--brand3),var(--brand1));animation:spin 30s linear infinite;z-index:-1;}
+    @keyframes spin{to{transform:rotate(1turn)}}
+    .hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}
+    @media (max-width:1000px){.hero-inner{grid-template-columns:1fr}}
+    .kicker{color:#0b3a84;font-weight:800;letter-spacing:.15em;text-transform:uppercase;font-size:.78rem}
+    h1{margin:.35rem 0 0;font-size:clamp(32px,5vw,54px);line-height:1.06}
+    .hero-sub{color:#334155;font-size:clamp(16px,2.1vw,19px);margin:.8rem 0 1.4rem}
+    .cta-wrap{display:flex;gap:.8rem;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+      padding:.9rem 1.1rem;border-radius:14px;font-weight:800;border:1px solid var(--line);
+      background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(255,255,255,.6));
+      box-shadow:var(--shadow);color:#0b1d38;position:relative;overflow:hidden;
+      transition:transform var(--t-fast),box-shadow var(--t-fast);
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+    .btn:active{transform:translateY(0)}
+    .btn-primary{color:#0b1220;background:var(--grad);border:0}
+    .hero-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .hero-img{width:100%;height:clamp(220px,30vw,360px);border-radius:14px;object-fit:cover;background:linear-gradient(135deg,rgba(31,162,255,.25),rgba(18,216,250,.2),rgba(166,255,203,.25));box-shadow:var(--shadow)}
+
+    /* SECTION HEADER */
+    .section-header{text-align:center;max-width:70ch;margin:0 auto clamp(26px,4vw,40px)}
+    .section-header h2{margin:0 0 10px;font-size:clamp(26px,3.6vw,38px);font-weight:800}
+    .section-header p{margin:0;font-size:clamp(16px,2vw,19px);color:var(--muted)}
+
+    /* STATS */
+    .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:26px}
+    @media (max-width:960px){.stats{grid-template-columns:repeat(2,1fr)}}
+    .stat{background:var(--surface);border:1px solid var(--line);padding:16px;border-radius:16px;text-align:center;box-shadow:var(--shadow);position:relative;transition:transform var(--t-med),box-shadow var(--t-med)}
+    .stat:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+    .stat .n{font-size:clamp(22px,4.3vw,34px);font-weight:900;line-height:1}
+    .stat .l{color:#334155;font-weight:700;font-size:.95rem}
+
+    /* TABS */
+    .tablist{display:flex;flex-wrap:wrap;gap:.6rem;margin:18px 0 20px;justify-content:center;align-items:center}
+    .tab{
+      padding:.6rem .9rem;border-radius:var(--r-full);border:1px solid var(--line);
+      background:#F3F7FF;color:#0b1d38;font-weight:800;cursor:pointer;
+      transition:transform .12s ease,box-shadow .12s ease, background .2s ease, color .2s ease, border-color .2s ease;
+      box-shadow:var(--shadow-sm)
+    }
+    .tab:hover{transform:translateY(-1px)}
+    .tab:focus-visible{outline:3px solid rgba(31,162,255,.5)}
+    .tab[aria-selected="true"]{
+      background:var(--grad); color:#0b1220; border-color:transparent;
+      box-shadow:0 8px 18px rgba(31,162,255,.25)
+    }
+    .panel{display:none;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+    .panel.active{display:block}
+    .panel h3{margin-top:0}
+    .panel ul{margin:0;padding-left:1.2rem}
+    .panel li{margin:.35rem 0}
+
+    /* CARDS + GRID */
+    .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow);transition:transform var(--t-med),box-shadow var(--t-med)}
+    .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:960px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
+    .sep{height:1px;background:var(--line);margin:28px 0}
+
+    /* FOOTER & SOCIAL */
+    footer{padding:36px 0 66px;background:linear-gradient(0deg,#FFFFFF,#F7FBFF);border-top:1px solid var(--line)}
+    .social a{margin-right:.7rem;display:inline-flex;width:40px;height:40px;border-radius:12px;align-items:center;justify-content:center;background:#F3F7FF;border:1px solid var(--line);color:#0b1d38;transition:transform var(--t-fast),box-shadow var(--t-fast)}
+    .social a:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+    .social-ico{width:22px;height:22px;display:block;object-fit:contain}
+    @media (max-width:520px){.social a{width:44px;height:44px}}
+
+    /* WHATSAPP FAB */
+    .whatsapp-fab{
+      position:fixed;right:clamp(12px,2.5vw,24px);bottom:calc(16px + env(safe-area-inset-bottom));
+      z-index:999;background:#22c55e;color:#041015;font-weight:900;border-radius:999px;padding:.85rem 1rem;box-shadow:var(--shadow);text-decoration:none;transition:transform var(--t-fast)
+    }
+    .whatsapp-fab:hover{transform:scale(1.06) rotate(3deg);color:#041015}
+
+    /* ASSISTANT */
+    .ai-card{padding:0;overflow:hidden;border-radius:18px;box-shadow:var(--shadow);border:1px solid var(--line);background:#fff}
+    .ai-head{display:flex;align-items:center;gap:.9rem;padding:16px 18px;background:linear-gradient(180deg,#ffffff,#F7FBFF);border-bottom:1px solid var(--line)}
+    .ai-badge{width:36px;height:36px;display:grid;place-items:center;border-radius:12px;font-weight:900;color:#fff;background:var(--grad);box-shadow:0 10px 20px rgba(31,162,255,.25);flex:0 0 36px}
+    .ai-title{margin:0;font-size:clamp(18px,2.6vw,22px);font-weight:800;color:#0b1d38}
+    .ai-sub{margin:2px 0 0;color:var(--muted);font-size:.9rem}
+    .ai-tip{margin-left:auto;color:#64748b;font-size:.86rem;white-space:nowrap}
+    .ai-body{padding:16px 18px}
+    .ai-frame{border:1px dashed var(--line);border-radius:16px;background:linear-gradient(180deg,#ffffff,#F0F8FF);padding:12px;margin-bottom:12px}
+    .ai-list{display:flex;flex-direction:column;max-height:420px;overflow:auto;padding:6px}
+    .ai-bubble{max-width:80%;white-space:pre-wrap;padding:.75rem .9rem;border-radius:14px;box-shadow:0 6px 20px rgba(2,12,32,.06);margin:.35rem 0}
+    .ai-bubble.assistant{background:#fff;color:#0b1220;border:1px solid var(--line);border-top-left-radius:6px;align-self:flex-start}
+    .ai-bubble.user{background:var(--grad);color:#0b1220;border-top-right-radius:6px;align-self:flex-end}
+    .ai-composer{display:flex;gap:10px;align-items:flex-start;padding-top:8px}
+    .ai-input{flex:1;min-height:44px;resize:vertical;max-height:220px;border:1px solid var(--line);border-radius:12px;padding:.8rem;font:inherit;color:#0b1d38;background:#fff}
+    .ai-hint{color:var(--muted);font-size:.86rem;margin:6px 0 0 2px}
+
+    .chips{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.4rem}
+    .chip{border:1px solid var(--line);background:#F3F7FF;border-radius:999px;padding:.45rem .8rem;font-weight:800;cursor:pointer}
+    a.chip{display:inline-flex;align-items:center;text-decoration:none;color:inherit}
+
+    /* REVEAL */
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity var(--t-med),transform var(--t-med)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    @media (prefers-reduced-motion:reduce){
+      .hero-blob{animation:none!important}
+      .btn:hover{transform:none}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main" id="i-skip">Aller au contenu</a>
+
+  <!-- HEADER -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="https://mistelgeehrt.com/" rel="home" aria-label="Aller à l'accueil Mistel Geehrt">
+        <img class="brand-logo-img" src="https://mistelgeehrt.com/wp-content/uploads/2025/08/Logo-Mistel-Geerhrt-New-v-small.png" alt="Mistel Geehrt">
+        <span>Mistel Geehrt</span>
+      </a>
+
+      <div class="right-tools">
+        <nav class="primary-nav" id="site-nav" aria-label="Navigation principale">
+          <a href="#services" id="nav-services">Services</a>
+          <a href="#cas" id="nav-cases">Cas clients</a>
+          <a href="#temoignages" id="nav-testimonials">Témoignages</a>
+          <a href="#insights" id="nav-insights">Data & Insights</a>
+          <a href="#contact" id="nav-contact">Contact</a>
+        </nav>
+
+        <div class="lang-switcher" role="group" aria-label="Choisir la langue">
+          <button class="lang-btn" id="btn-fr" data-lang="fr" aria-pressed="true">FR</button>
+          <button class="lang-btn" id="btn-en" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
+        <button class="nav-toggle" id="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Ouvrir le menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="#0B1220" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-blob" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="reveal">
+        <div class="kicker" id="hero-kicker">Automatisation • IA • Community Management</div>
+        <h1 id="hero-title">Moins de tâches répétitives, plus de résultats : nous automatisons, vous prospérez.</h1>
+        <p class="hero-sub" id="hero-sub">Solutions sur mesure haut de gamme : automatisations intelligentes, assistants IA performants, stratégies social media et sites WordPress premium. Nous optimisons vos processus, vous vous concentrez sur votre croissance.</p>
+        <div class="cta-wrap">
+          <a href="#contact" class="btn btn-primary" id="cta-quote">Demander un devis gratuit</a>
+          <a href="https://wa.me/237675800721?text=Je%20viens%20du%20site%20Mistel%20Geehrt%20et%20je%20souhaite%20un%20devis." class="btn" id="cta-whatsapp" rel="noopener">Discuter sur WhatsApp</a>
+          <a href="#cas" class="btn" id="cta-cases">Découvrir nos réussites</a>
+        </div>
+
+        <div class="stats reveal" aria-label="Chiffres clés">
+          <div class="stat"><div class="n" data-count="140">0</div><div class="l" id="st1">Clients accompagnés</div></div>
+          <div class="stat"><div class="n" data-count="60">0</div><div class="l" id="st2">Automatisations déployées</div></div>
+          <div class="stat"><div class="n" data-count="220">0</div><div class="l" id="st3">Projets livrés</div></div>
+          <div class="stat"><div class="n">4,9/5</div><div class="l" id="st4">Note satisfaction</div></div>
+          <div class="stat"><div class="n">&lt; 12 h</div><div class="l" id="st5">Délai de réponse</div></div>
+        </div>
+      </div>
+
+      <div class="hero-card reveal">
+        <img class="hero-img" alt="Illustration moderne représentant l'automatisation et l'intelligence artificielle" src="data:image/svg+xml;utf8,<?xml version='1.0'?><svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%231FA2FF'/><stop offset='0.5' stop-color='%2312D8FA'/><stop offset='1' stop-color='%23A6FFCB'/></linearGradient></defs><rect width='100%' height='100%' fill='%23FFFFFF'/><circle cx='300' cy='300' r='220' fill='url(%23g)' opacity='0.35'/><circle cx='820' cy='420' r='240' fill='url(%23g)' opacity='0.28'/><circle cx='560' cy='200' r='160' fill='url(%23g)' opacity='0.22'/></svg>">
+        <p class="muted" id="hero-note">Design épuré et moderne. Animations fluides et visuels optimisés pour l'expérience premium.</p>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- ASSISTANT -->
+    <section class="container reveal" id="chatbot" aria-labelledby="ai-title">
+      <div class="section-header">
+        <h2 id="ai-title">Assistant IA Mistel Geehrt</h2>
+        <p id="ai-subtitle">Obtenez des réponses instantanées sur nos services d'automatisation</p>
+      </div>
+
+      <div class="ai-card" role="region" aria-label="Conversation avec l'assistante Caroline">
+        <div class="ai-head">
+          <div class="ai-badge" aria-hidden="true">IA</div>
+          <div>
+            <h3 class="ai-title" id="ai-head-title">Caroline, votre conseillère digitale</h3>
+            <p class="ai-sub" id="ai-head-sub">Spécialisée en automatisation et IA</p>
+          </div>
+          <span class="ai-tip" id="ai-tip">Entrée pour envoyer • Maj+Entrée pour nouvelle ligne</span>
+        </div>
+
+        <div class="ai-body">
+          <div class="ai-frame">
+            <div id="ai-log" class="ai-list" role="log" aria-live="polite" aria-relevant="additions"></div>
+          </div>
+
+          <div class="ai-composer">
+            <textarea id="ai-input" class="ai-input" rows="2" placeholder="Décrivez votre projet d'automatisation..."></textarea>
+            <button id="ai-send" class="btn btn-primary" type="button" aria-label="Envoyer le message">Envoyer</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="ai-hint" id="ai-hint">Caroline analyse votre besoin, recommande la solution optimale et vous oriente vers le canal le plus adapté : devis personnalisé, échange WhatsApp direct ou prise de rendez-vous.</p>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="container reveal">
+      <div class="section-header">
+        <h2 id="srv-title">Nos expertises qui transforment votre business</h2>
+        <p id="srv-sub">Solutions premium sur mesure pour automatiser vos processus et décupler votre performance commerciale</p>
+      </div>
+
+      <div class="tablist" role="tablist" aria-label="Onglets services">
+        <button class="tab" role="tab" aria-selected="true" aria-controls="p-1" id="t-1">Automatisation</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-2" id="t-2">Intelligence Artificielle</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-3" id="t-3">Community Management</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-4" id="t-4">Design & Infographie</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-5" id="t-5">Sites Web Premium</button>
+      </div>
+
+      <div id="p-1" class="panel active" role="tabpanel" aria-labelledby="t-1">
+        <h3 id="p1-h">Automatisation intelligente des processus</h3>
+        <ul id="p1-ul">
+          <li><strong>Audit stratégique express</strong> : cartographie détaillée de vos workflows et élimination des points de friction.</li>
+          <li><strong>Intégrations CRM & messagerie avancées</strong> : WhatsApp Business, email marketing, réseaux sociaux — zéro prospect perdu.</li>
+          <li><strong>Tableaux de bord temps réel</strong> : KPIs et métriques essentiels pour des décisions éclairées et rapides.</li>
+          <li><strong>Formation personnalisée</strong> : prise en main intuitive et adoption rapide sans jargon technique.</li>
+        </ul>
+      </div>
+
+      <div id="p-2" class="panel" role="tabpanel" aria-labelledby="t-2">
+        <h3 id="p2-h">Intelligence Artificielle sur mesure</h3>
+        <ul id="p2-ul">
+          <li><strong>Assistants IA conversationnels</strong> : connectés à vos données métier, disponibles 24h/7j pour vos clients.</li>
+          <li><strong>Copilotes internes intelligents</strong> : procédures automatisées, base de connaissances, recherches instantanées.</li>
+          <li><strong>Génération de contenu IA assistée</strong> : rédaction optimisée, scripts vidéo, campagnes publicitaires — toujours sous supervision humaine.</li>
+          <li><strong>Prototypage accéléré</strong> : développement d'agents IA fonctionnels en quelques jours, pas en mois.</li>
+        </ul>
+      </div>
+
+      <div id="p-3" class="panel" role="tabpanel" aria-labelledby="t-3">
+        <h3 id="p3-h">Community Management stratégique</h3>
+        <ul id="p3-ul">
+          <li><strong>Stratégie éditoriale multiplateforme</strong> : Facebook, Instagram, LinkedIn, X (Twitter) - cohérence garantie.</li>
+          <li><strong>Contenus haute conversion</strong> : carrousels engageants, vidéos courtes, stories impactantes, contenu généré par les utilisateurs.</li>
+          <li><strong>Gestion communautaire proactive</strong> : modération intelligente, réponses rapides, maintien de votre image de marque.</li>
+          <li><strong>Analytics avancés</strong> : croissance d'audience mesurable, taux d'engagement optimisé, génération de leads qualifiés.</li>
+        </ul>
+      </div>
+
+      <div id="p-4" class="panel" role="tabpanel" aria-labelledby="t-4">
+        <h3 id="p4-h">Design & Infographie premium</h3>
+        <ul id="p4-ul">
+          <li><strong>Identités visuelles mémorables</strong> : créations qui reflètent parfaitement l'essence de votre marque.</li>
+          <li><strong>Infographies pédagogiques</strong> : contenus visuels percutants et facilement partageables sur tous supports.</li>
+          <li><strong>Bibliothèque de templates personnalisés</strong> : ressources graphiques cohérentes pour votre équipe.</li>
+          <li><strong>Créations publicitaires optimisées</strong> : visuels adaptés aux spécificités de chaque plateforme digitale.</li>
+        </ul>
+      </div>
+
+      <div id="p-5" class="panel" role="tabpanel" aria-labelledby="t-5">
+        <h3 id="p5-h">Sites Web haute performance</h3>
+        <ul id="p5-ul">
+          <li><strong>WordPress premium</strong> : sites vitrine et landing pages ultrarapides, sécurisés et évolutifs.</li>
+          <li><strong>SEO technique avancé</strong> : optimisation structure, balises méta, données structurées pour un référencement optimal.</li>
+          <li><strong>Performance web excellente</strong> : images optimisées, code allégé, expérience utilisateur fluide sur tous appareils.</li>
+          <li><strong>Maintenance proactive</strong> : support technique expert et mises à jour régulières incluses.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CAS -->
+    <section id="cas" class="container reveal">
+      <div class="section-header">
+        <h2 id="cases-title">Cas clients : des résultats qui parlent d'eux-mêmes</h2>
+        <p id="cases-sub">Découvrez comment nous avons révolutionné les processus de nos clients avec des solutions concrètes</p>
+      </div>
+
+      <div class="grid cols-3">
+        <article class="card">
+          <h3 id="c1-h">E-commerce Mode — Douala</h3>
+          <p id="c1-p">Problème : Paniers abandonnés et SAV débordé → <strong>Solution : CRM WhatsApp + Chatbot FAQ intelligent</strong>. <br><strong>Résultat : +22% de ventes, -35% de tickets SAV en 60 jours.</strong></p>
+          <a href="cas-ecommerce-mode-douala.html" id="c1-a">Découvrir l'étude complète</a>
+        </article>
+        <article class="card">
+          <h3 id="c2-h">Formation en ligne — Yaoundé</h3>
+          <p id="c2-p">Problème : Inscriptions manuelles chronophages → <strong>Solution : Tunnels de conversion automatisés + séquences email</strong>. <br><strong>Résultat : +31% d'inscrits, -50% de temps administratif.</strong></p>
+          <a href="cas-education-yaounde.html" id="c2-a">Voir les détails</a>
+        </article>
+        <article class="card">
+          <h3 id="c3-h">Agence Immobilière — Toulon</h3>
+          <p id="c3-p">Problème : Délais de prise de contact trop longs → <strong>Solution : Formulaires intelligents + routage automatique des leads</strong>. <br><strong>Résultat : -46% de délai de réponse client.</strong></p>
+          <a href="cas-immobilier-toulon.html" id="c3-a">Consulter le cas</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container reveal">
+      <div class="section-header">
+        <h2 id="contact-title">Prêt à automatiser votre réussite ?</h2>
+        <p id="contact-sub">Échangeons sur votre projet de transformation digitale et découvrons ensemble comment optimiser votre performance</p>
+      </div>
+
+      <div class="grid cols-2">
+        <form id="contact-form" class="card"
+              action="https://formspree.io/f/meoznqgk"
+              method="post" novalidate>
+          <label id="f-name-l">Votre nom complet<br>
+            <input name="name" required autocomplete="name"
+                   style="width:100%;padding:.7rem;border-radius:10px;border:1px solid var(--line);background:#fff;color:#0b1d38">
+          </label><br>
+
+          <label id="f-email-l">Adresse email professionnelle<br>
+            <input type="email" name="email" required autocomplete="email"
+                   style="width:100%;padding:.7rem;border-radius:10px;border:1px solid var(--line);background:#fff;color:#0b1d38">
+          </label><br>
+
+          <label id="f-phone-l">Téléphone (WhatsApp de préférence)<br>
+            <input name="phone" autocomplete="tel"
+                   style="width:100%;padding:.7rem;border-radius:10px;border:1px solid var(--line);background:#fff;color:#0b1d38">
+          </label><br>
+
+          <label id="f-msg-l">Décrivez votre projet d'automatisation<br>
+            <textarea name="message" rows="5" required
+                      style="width:100%;padding:.7rem;border-radius:10px;border:1px solid var(--line);background:#fff;color:#0b1d38"></textarea>
+          </label>
+
+          <input type="hidden" name="_subject" value="Nouvelle demande depuis le site Mistel Geehrt">
+          <input type="hidden" name="_language" value="fr">
+          <input type="hidden" name="page_url">
+          <input type="hidden" name="referrer">
+          <input type="hidden" name="utm_source">
+          <input type="hidden" name="utm_medium">
+          <input type="hidden" name="utm_campaign">
+          <input type="hidden" name="utm_term">
+          <input type="hidden" name="utm_content">
+
+          <!-- Honeypot -->
+          <input type="text" name="_gotcha" autocomplete="off" tabindex="-1"
+                 style="position:absolute;left:-9999px;height:0;width:0;opacity:0">
+
+          <button class="btn btn-primary" type="submit" id="f-submit">Envoyer ma demande</button>
+          <p id="contact-msg" class="muted" style="margin:.6rem 0 0"></p>
+        </form>
+
+        <div class="card">
+          <p>
+            <strong id="ct-whats">WhatsApp Business</strong> :
+            <a href="https://wa.me/237675800721?text=Je%20viens%20du%20site%20Mistel%20Geehrt%20et%20je%20souhaite%20un%20devis." rel="noopener">+237 675 800 721</a><br>
+            <strong id="ct-call">Ligne directe</strong> : <a href="tel:+237675800721">+237 675 800 721</a><br>
+            <strong id="ct-mail">Email professionnel</strong> : <a href="mailto:mistelgeehrt@gmail.com">mistelgeehrt@gmail.com</a>
+          </p>
+          <p class="muted" id="ct-offices">Nos bureaux : Toulon, France • Douala, Cameroun</p>
+          <div class="cta-wrap">
+            <a class="btn" href="#" id="share">Partager cette page</a>
+            <a class="btn" download href="https://mistelgeehrt.com/wp-content/uploads/2025/08/guy-honore.vcf" id="add-contact">Ajouter nos contacts</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="grid cols-2">
+        <div>
+          <a class="brand" href="https://mistelgeehrt.com/" rel="home" style="margin-bottom:.6rem;display:inline-flex" aria-label="Retour à l'accueil Mistel Geehrt">
+            <img class="brand-logo-img" src="https://mistelgeehrt.com/wp-content/uploads/2025/08/Logo-Mistel-Geerhrt-New-v-small.png" alt="Logo Mistel Geehrt">
+            <span>Mistel Geehrt</span>
+          </a>
+          <p class="muted">© <span id="y"></span> Mistel Geehrt Management. Tous droits réservés.</p>
+          <p class="muted">
+            <a href="https://mistelgeehrt.com/mentions-legales/" id="legal">Mentions légales</a> ·
+            <a href="https://mistelgeehrt.com/politique-rgpd-charte-de-protection-des-donnees/" id="rgpd">Politique de confidentialité RGPD</a>
+          </p>
+        </div>
+        <div class="social" aria-label="Nos réseaux sociaux">
+          <a href="https://www.facebook.com/profile.php?id=61557460662989&mibextid=ZbWKwL" aria-label="Suivez-nous sur Facebook" rel="noopener">
+            <img class="social-ico" src="https://mistelgeehrt.com/wp-content/uploads/2025/08/Icon-Facebook.png" alt="Facebook" loading="lazy" decoding="async">
+          </a>
+          <a href="https://x.com/mistelgeehrt?t=aQh8y4dSKebEWofqNQ3abw&s=09" aria-label="Suivez-nous sur X (Twitter)" rel="noopener">
+            <img class="social-ico" src="https://mistelgeehrt.com/wp-content/uploads/2025/08/Icon-X.png" alt="X (Twitter)" loading="lazy" decoding="async">
+          </a>
+          <a href="https://www.instagram.com/mistelgeehrtofficial?igsh=YzljYTk1ODg3Zg==" aria-label="Suivez-nous sur Instagram" rel="noopener">
+            <img class="social-ico" src="https://mistelgeehrt.com/wp-content/uploads/2025/08/Icon-instagram.png" alt="Instagram" loading="lazy" decoding="async">
+          </a>
+          <a href="https://www.linkedin.com/company/mistel-geehrt/" aria-label="Suivez-nous sur LinkedIn" rel="noopener">
+            <img class="social-ico" src="https://mistelgeehrt.com/wp-content/uploads/2025/08/Icon-Linkedin.png" alt="LinkedIn" loading="lazy" decoding="async">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp FAB -->
+  <a class="whatsapp-fab" href="https://wa.me/237675800721?text=Je%20viens%20du%20site%20Mistel%20Geehrt%20et%20je%20souhaite%20un%20devis." aria-label="Nous contacter sur WhatsApp" id="fab-whatsapp" rel="noopener">WhatsApp</a>
+
+  <!-- INTERACTIONS COMMUNES -->
+  <script>
+    // Année
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Tabs
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.tablist').forEach(tablist=>{
+        const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+        const panels = tabs.map(t => document.getElementById(t.getAttribute('aria-controls'))).filter(Boolean);
+
+        function activate(tab){
+          const targetId = tab.getAttribute('aria-controls');
+          tabs.forEach(t => t.setAttribute('aria-selected', t===tab ? 'true' : 'false'));
+          panels.forEach(p => p.classList.toggle('active', p.id === targetId));
+          tab.focus();
+        }
+
+        tablist.addEventListener('click', (e)=>{ const btn = e.target.closest('[role="tab"]'); if(!btn) return; activate(btn); });
+        tablist.addEventListener('keydown', (e)=>{
+          const current = document.activeElement; const i = tabs.indexOf(current); if(i<0) return;
+          if(e.key==='ArrowRight'){ e.preventDefault(); activate(tabs[(i+1)%tabs.length]); }
+          if(e.key==='ArrowLeft'){  e.preventDefault(); activate(tabs[(i-1+tabs.length)%tabs.length]); }
+          if(e.key==='Home'){ e.preventDefault(); activate(tabs[0]); }
+          if(e.key==='End'){  e.preventDefault(); activate(tabs[tabs.length-1]); }
+        });
+
+        const pre = tabs.find(t => t.getAttribute('aria-selected')==='true' && document.getElementById(t.getAttribute('aria-controls')));
+        activate(pre || tabs[0]);
+      });
+    });
+
+    // Compteurs
+    function animateCount(el, target, dur=1400){
+      const start=0, st=performance.now();
+      function tick(now){
+        const p=Math.min((now-st)/dur,1);
+        el.textContent = Math.floor(start+(target-start)*p);
+        if(p<1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+    const ioCounters=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.querySelectorAll('[data-count]').forEach(n=> animateCount(n, parseInt(n.dataset.count,10)));
+          ioCounters.unobserve(e.target);
+        }
+      });
+    },{threshold:.35});
+    const statsEl = document.querySelector('.stats'); if(statsEl) ioCounters.observe(statsEl);
+
+    // Mobile nav
+    const navBtn = document.getElementById('nav-toggle');
+    const nav = document.getElementById('site-nav');
+    function closeMenu(){ nav.classList.remove('open'); navBtn.setAttribute('aria-expanded','false'); document.body.classList.remove('nav-open'); }
+    navBtn.addEventListener('click', ()=>{
+      const open = nav.classList.toggle('open');
+      navBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.classList.toggle('nav-open', open);
+    });
+    nav.addEventListener('click', (e)=>{ if(e.target.closest('a')) closeMenu(); });
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeMenu(); });
+    document.addEventListener('click', (e)=>{ if(!nav.contains(e.target) && !navBtn.contains(e.target)) closeMenu(); });
+
+    // Reveal on scroll
+    const ioReveal = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){ entry.target.classList.add('visible'); ioReveal.unobserve(entry.target); }
+      });
+    },{threshold:0.12, rootMargin:'0px 0px -50px 0px'});
+    document.querySelectorAll('.reveal').forEach(el=> ioReveal.observe(el));
+  </script>
+
+  <!-- Assistant IA (chatbot) — DOM-sûr avec boutons -->
+  <script>
+(() => {
+  const ENDPOINT = '/ai/chat';
+  const LEAD_URL = '/ai/lead';
+  const aiInput = document.getElementById('ai-input');
+  const aiSend  = document.getElementById('ai-send');
+  const aiLog   = document.getElementById('ai-log');
+
+  const SESSION_KEY='mg_chat_session';
+  let session_id = localStorage.getItem(SESSION_KEY) || ('lead-' + Math.random().toString(36).slice(2));
+  localStorage.setItem(SESSION_KEY, session_id);
+
+  let history = [];
+  let typingEl = null;
+  let currentLang = 'fr';
+
+  function addBubble(role, htmlOrNode){
+    const el = document.createElement('div');
+    el.className = 'ai-bubble ' + (role==='user'?'user':'assistant');
+    if (typeof htmlOrNode === 'string') el.innerHTML = htmlOrNode;
+    else if (htmlOrNode) el.appendChild(htmlOrNode);
+    aiLog.appendChild(el);
+    aiLog.scrollTop = aiLog.scrollHeight;
+    return el;
+  }
+  function clearLog(){ aiLog.innerHTML=''; }
+  function showTyping(on){
+    if (on && !typingEl){
+      typingEl = addBubble('assistant', 'Caroline écrit<span class="dots">…</span>');
+      typingEl.classList.add('typing');
+      let n=0; const i=setInterval(()=>{
+        if(!typingEl){clearInterval(i);return;}
+        const d = typingEl.querySelector('.dots');
+        if(d) d.textContent = '.'.repeat((n++%3)+1);
+      }, 400);
+    } else if (!on && typingEl){
+      typingEl.remove(); typingEl = null;
+    }
+  }
+  function setSending(on){
+    aiSend.disabled = on;
+    aiSend.textContent = on ? '…' : (currentLang==='fr' ? 'Envoyer' : 'Send');
+  }
+
+  function L(){
+    return currentLang==='fr' ? {
+      welcome: 'Bonjour ' + String.fromCodePoint(0x1F44B) + ' Je suis Caroline, votre assistante. Comment puis-je aider ?',
+      chips: [
+        ['Demander un devis','Je veux un devis'],
+        ['Parler sur WhatsApp','Parler sur WhatsApp'],
+        ['Exemple d’automatisation','Donne-moi un exemple d’automatisation']
+      ],
+      errBusy: "Notre service est momentanément indisponible. Essayez WhatsApp ou le formulaire.",
+      errConn: "Impossible de joindre le service."
+    } : {
+      welcome: 'Hello ' + String.fromCodePoint(0x1F44B) + ' I’m Caroline, your assistant. How can I help?',
+      chips: [
+        ['Request a quote','I want a quote'],
+        ['Chat on WhatsApp','Chat on WhatsApp'],
+        ['Automation example','Give me an automation example']
+      ],
+      errBusy: "Service temporarily unavailable. Try WhatsApp or the form.",
+      errConn: "Cannot reach the service."
+    };
+  }
+
+  // ------- Accueil + chips (DOM, pas d’entités HTML) -------
+  function welcome(){
+    const wrap = document.createElement('div');
+
+    const intro = document.createElement('div');
+    intro.style.marginBottom = '.3rem';
+    intro.textContent = L().welcome;
+    wrap.appendChild(intro);
+
+    const chips = document.createElement('div');
+    chips.className = 'chips';
+
+    // Chip 1 & 3 = envoient un message ; Chip 2 = ouvre WhatsApp
+    L().chips.forEach(([label, q], idx)=>{
+      if(idx === 1){
+        const a = document.createElement('a');
+        a.className = 'chip chip-link';
+        a.target = '_blank'; a.rel = 'noopener';
+        a.href = 'https://wa.me/237675800721?text=Je%20viens%20du%20site%20Mistel%20Geehrt%20et%20je%20souhaite%20un%20devis.';
+        a.textContent = label;
+        chips.appendChild(a);
+      }else{
+        const b = document.createElement('button');
+        b.type = 'button'; b.className = 'chip';
+        b.textContent = label; b.dataset.q = q;
+        b.addEventListener('click', ()=>{ aiInput.value = q; sendMessage(); });
+        chips.appendChild(b);
+      }
+    });
+    wrap.appendChild(chips);
+
+    addBubble('assistant', wrap);
+  }
+
+  // En cas de (ré)hydratation qui efface le log → réafficher l’accueil
+  function ensureWelcome(){
+    if (!aiLog.querySelector('.ai-bubble')) welcome();
+  }
+
+  function renderActions(actions){
+    if(!actions || !actions.length) return '';
+    const btns = actions.map(a => `<a class="btn" href="${a.href}" target="_blank" rel="noopener">${a.label}</a>`).join(' ');
+    return `<div class="cta-wrap" style="margin-top:.6rem">${btns}</div>`;
+  }
+
+  function renderAsk(ask){
+    if(!ask) return '';
+    const inputs = ask.map(f => {
+      const req = f.required ? 'required' : '';
+      return `<label style="display:block;margin:.4rem 0">${f.label}<br>
+        <input data-id="${f.id}" type="${f.type}" ${req}
+          style="width:100%;padding:.6rem;border:1px solid var(--line);border-radius:10px">
+      </label>`;
+    }).join('');
+    const id = 'lead-'+Math.random().toString(36).slice(2);
+    return `<form id="${id}" class="card" style="margin-top:.6rem;padding:.8rem">
+      ${inputs}
+      <button class="btn btn-primary" type="submit">${currentLang==='fr'?'Envoyer ma demande':'Send my request'}</button>
+      <div class="muted" style="margin-top:.4rem">${currentLang==='fr'?'Réponse sous 24 h (jours ouvrés).':'Answer within 24h (business days).'}</div>
+    </form>`;
+  }
+  function attachAskHandler(container, ask){
+    const form = container.querySelector('form'); if(!form) return;
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const payload = { session_id, message:'Lead via Assistant', source:'chat' };
+      ask.forEach(f=>{
+        const el = form.querySelector(`[data-id="${f.id}"]`);
+        payload[f.id] = el ? el.value.trim() : '';
+      });
+      try{
+        const res = await fetch(LEAD_URL, {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify(payload)
+        });
+        const json = await res.json();
+        form.innerHTML = json?.ok
+          ? `<b>${currentLang==='fr'?'Merci':'Thanks'}!</b> ${currentLang==='fr'?'Nous revenons vers vous rapidement.':'We will get back to you shortly.'}`
+          : `${currentLang==='fr'?'Oups. Impossible d’envoyer. Écrivez-nous à':'Oops. Could not send. Email us at'} <a href="mailto:mistelgeehrt@gmail.com">mistelgeehrt@gmail.com</a>.`;
+      }catch{
+        form.innerHTML = `${currentLang==='fr'?'Oups. Impossible d’envoyer. Écrivez-nous à':'Oops. Could not send. Email us at'} <a href="mailto:mistelgeehrt@gmail.com">mistelgeehrt@gmail.com</a>.`;
+      }
+    });
+  }
+
+  async function sendMessage(){
+    const message = (aiInput.value||'').trim();
+    if(!message) return;
+
+    addBubble('user', message);
+    aiInput.value = '';
+    setSending(true);
+    showTyping(true);
+
+    try{
+      const res = await fetch(ENDPOINT, {
+        method:'POST',
+        headers:{ 'Content-Type':'application/json' },
+        body: JSON.stringify({ session_id, message, history, meta:{lang: currentLang} })
+      });
+      let reply = currentLang==='fr' ? 'Oups, pas de réponse.' : 'Oops, no reply.';
+      let actions = [], ask = null;
+
+      if (res.ok){
+        const json = await res.json();
+        reply = json?.reply || reply;
+        actions = json?.actions || [];
+        ask = json?.ask || null;
+      } else {
+        reply = L().errBusy;
+        actions = [
+          {type:'cta', label: currentLang==='fr'?'Ouvrir WhatsApp':'Open WhatsApp', href:'https://wa.me/237675800721?text=Je%20viens%20du%20site%20Mistel%20Geehrt%20et%20je%20souhaite%20un%20devis.'},
+          {type:'cta', label: currentLang==='fr'?'Demander un devis':'Request a quote', href:'#contact'}
+        ];
+      }
+
+      showTyping(false);
+      const html = `${reply}${renderActions(actions)}${renderAsk(ask)}`;
+      const el = addBubble('assistant', html);
+      attachAskHandler(el, ask);
+
+      history.push({role:'user',content:message}, {role:'assistant',content:reply});
+      history = history.slice(-12);
+    }catch{
+      showTyping(false);
+      addBubble('assistant',
+        `${L().errConn} <br>
+         <div class="cta-wrap" style="margin-top:.6rem">
+           <a class="btn" href="https://wa.me/237675800721?text=Je%20viens%20du%20site%20Mistel%20Geehrt%20et%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">${currentLang==='fr'?'WhatsApp':'WhatsApp'}</a>
+           <a class="btn" href="#contact">${currentLang==='fr'?'Demander un devis':'Request a quote'}</a>
+         </div>`);
+    }finally{
+      setSending(false);
+      aiInput.focus();
+    }
+  }
+
+  // Entrée pour envoyer / Maj+Entrée = nouvelle ligne
+  aiInput.addEventListener('keydown', (e)=>{
+    if (e.key === 'Enter' && !e.shiftKey){
+      e.preventDefault(); sendMessage();
+    }
+  });
+  aiSend.addEventListener('click', sendMessage);
+
+  // Expose pour i18n + garde-fou
+  window.__chat = {
+    setLang: (lang) => {
+      currentLang = lang;
+      clearLog(); welcome();
+      setSending(false);
+      aiInput.setAttribute('placeholder', lang==='fr' ? "Décrivez votre projet d'automatisation..." : "Describe your automation project...");
+    },
+    ensureWelcome
+  };
+
+  // Afficher l’accueil, puis réassurer après hydratations éventuelles
+  welcome();
+  requestAnimationFrame(ensureWelcome);
+  setTimeout(ensureWelcome, 200);
+  window.addEventListener('load', ensureWelcome);
+})();
+  </script>
+
+  <!-- i18n (FR/EN switch) -->
+  <script>
+    (function(){
+      const I18N = {
+        fr: {
+          metaTitle: "Mistel Geehrt – Automatisation & IA qui font vendre",
+          metaDesc: "Automatisations sur mesure, assistants IA, social media et sites WordPress. 140+ clients, 60+ automatisations, réponse \u003C 24 h. Demandez votre devis.",
+          skip: "Aller au contenu",
+          nav: { services:"Services", cases:"Cas clients", testi:"Témoignages", insights:"Data & Insights", contact:"Contact" },
+          hero: {
+            kicker:"Automatisation • IA • Community Management",
+            title:"Moins de tâches répétitives, plus de résultats : nous automatisons, vous prospérez.",
+            sub:"Solutions sur mesure haut de gamme : automatisations intelligentes, assistants IA performants, stratégies social media et sites WordPress premium. Nous optimisons vos processus, vous vous concentrez sur votre croissance.",
+            cta1:"Demander un devis gratuit", cta2:"Discuter sur WhatsApp", cta3:"Découvrir nos réussites",
+            note:"Design épuré et moderne. Animations fluides et visuels optimisés pour l'expérience premium.",
+            stats:["Clients accompagnés","Automatisations déployées","Projets livrés","Note satisfaction","Délai de réponse"]
+          },
+          ai:{
+            sectionTitle:"Assistant IA Mistel Geehrt",
+            sectionSub:"Obtenez des réponses instantanées sur nos services d'automatisation",
+            headTitle:"Caroline, votre conseillère digitale",
+            headSub:"Spécialisée en automatisation et IA",
+            tip:"Entrée pour envoyer • Maj+Entrée pour nouvelle ligne",
+            hint:"Caroline analyse votre besoin, recommande la solution optimale et vous oriente vers le canal le plus adapté : devis personnalisé, échange WhatsApp direct ou prise de rendez-vous.",
+            send:"Envoyer", placeholder:"Décrivez votre projet d'automatisation..."
+          },
+          services:{
+            title:"Nos expertises qui transforment votre business",
+            sub:"Solutions premium sur mesure pour automatiser vos processus et décupler votre performance commerciale",
+            tabs:["Automatisation","Intelligence Artificielle","Community Management","Design & Infographie","Sites Web Premium"]
+          },
+          cases:{ title:"Cas clients : des résultats qui parlent d'eux-mêmes", sub:"Découvrez comment nous avons révolutionné les processus de nos clients avec des solutions concrètes" },
+          contact:{
+            title:"Prêt à automatiser votre réussite ?",
+            sub:"Échangeons sur votre projet de transformation digitale et découvrons ensemble comment optimiser votre performance",
+            name:"Votre nom complet", email:"Adresse email professionnelle", phone:"Téléphone (WhatsApp de préférence)", msg:"Décrivez votre projet d'automatisation", send:"Envoyer ma demande",
+            whats:"WhatsApp Business", call:"Ligne directe", mail:"Email professionnel", offices:"Nos bureaux : Toulon, France • Douala, Cameroun",
+            share:"Partager cette page", add:"Ajouter nos contacts",
+            shareData:{title:"Mistel Geehrt - Automatisation & IA", text:"Solutions premium d'automatisation et d'intelligence artificielle"}
+          },
+          footer:{ legal:"Mentions légales", rgpd:"Politique de confidentialité RGPD" },
+          fab:"WhatsApp"
+        },
+        en: {
+          metaTitle: "Mistel Geehrt – Automation & AI that drive sales",
+          metaDesc: "Custom automations, AI assistants, social media and WordPress sites. 140+ clients, 60+ automations, response \u003C 24 h. Get your quote.",
+          skip: "Skip to content",
+          nav: { services:"Services", cases:"Case studies", testi:"Testimonials", insights:"Data & Insights", contact:"Contact" },
+          hero: {
+            kicker:"Automation • AI • Community Management",
+            title:"Fewer repetitive tasks, more results: we automate, you thrive.",
+            sub:"Premium tailor-made solutions: intelligent automations, high-performance AI assistants, social media strategies and premium WordPress sites. We optimize your processes, you focus on growth.",
+            cta1:"Request a free quote", cta2:"Chat on WhatsApp", cta3:"Discover our successes",
+            note:"Clean, modern design. Smooth animations and visuals optimized for premium experience.",
+            stats:["Clients supported","Automations deployed","Projects delivered","Satisfaction rating","Response time"]
+          },
+          ai:{
+            sectionTitle:"Mistel Geehrt AI Assistant",
+            sectionSub:"Get instant answers about our automation services",
+            headTitle:"Caroline, your digital advisor",
+            headSub:"Specialized in automation and AI",
+            tip:"Enter to send • Shift+Enter for new line",
+            hint:"Caroline analyzes your need, recommends the optimal solution and guides you to the most suitable channel: personalized quote, direct WhatsApp exchange or appointment booking.",
+            send:"Send", placeholder:"Describe your automation project..."
+          },
+          services:{ title:"Our expertise that transforms your business", sub:"Premium custom solutions to automate processes and multiply your commercial performance", tabs:["Automation","Artificial Intelligence","Community Management","Design & Infographics","Premium Websites"] },
+          cases:{ title:"Client cases: results that speak for themselves", sub:"Discover how we revolutionized our clients' processes with concrete solutions" },
+          contact:{
+            title:"Ready to automate your success?",
+            sub:"Let's discuss your digital transformation project and discover together how to optimize your performance",
+            name:"Your full name", email:"Professional email address", phone:"Phone (preferably WhatsApp)", msg:"Describe your automation project", send:"Send my request",
+            whats:"WhatsApp Business", call:"Direct line", mail:"Professional email", offices:"Our offices: Toulon, France • Douala, Cameroon",
+            share:"Share this page", add:"Add our contacts",
+            shareData:{title:"Mistel Geehrt - Automation & AI", text:"Premium automation and artificial intelligence solutions"}
+          },
+          footer:{ legal:"Legal Notice", rgpd:"GDPR Privacy Policy" },
+          fab:"WhatsApp"
+        }
+      };
+
+      const $ = sel => document.querySelector(sel);
+      const setText = (sel, v) => { const el=$(sel); if(el) el.textContent = v; };
+      const setHTML = (sel, v) => { const el=$(sel); if(el) el.innerHTML = v; };
+
+      const m = {
+        ogTitle: document.querySelector('meta[property="og:title"]'),
+        ogDesc:  document.querySelector('meta[property="og:description"]'),
+        twTitle: document.querySelector('meta[name="twitter:title"]'),
+        twDesc:  document.querySelector('meta[name="twitter:description"]'),
+        desc:    document.querySelector('meta[name="description"]')
+      };
+
+      const shareBtn = document.getElementById('share');
+
+      function applyLang(lang){
+        const L = I18N[lang];
+
+        document.title = L.metaTitle;
+        if(m.desc)    m.desc.setAttribute('content', L.metaDesc);
+        if(m.ogTitle) m.ogTitle.setAttribute('content', L.metaTitle);
+        if(m.ogDesc)  m.ogDesc.setAttribute('content', L.metaDesc);
+        if(m.twTitle) m.twTitle.setAttribute('content', L.metaTitle);
+        if(m.twDesc)  m.twDesc.setAttribute('content', L.metaDesc);
+
+        setText('#i-skip', L.skip);
+        setText('#nav-services', L.nav.services);
+        setText('#nav-cases', L.nav.cases);
+        setText('#nav-testimonials', L.nav.testi);
+        setText('#nav-insights', L.nav.insights);
+        setText('#nav-contact', L.nav.contact);
+
+        setText('#hero-kicker', L.hero.kicker);
+        setText('#hero-title', L.hero.title);
+        setText('#hero-sub', L.hero.sub);
+        setText('#cta-quote', L.hero.cta1);
+        setText('#cta-whatsapp', L.hero.cta2);
+        setText('#cta-cases', L.hero.cta3);
+        setText('#hero-note', L.hero.note);
+        setText('#st1', L.hero.stats[0]); setText('#st2', L.hero.stats[1]); setText('#st3', L.hero.stats[2]); setText('#st4', L.hero.stats[3]); setText('#st5', L.hero.stats[4]);
+
+        setText('#ai-title', L.ai.sectionTitle);
+        setText('#ai-subtitle', L.ai.sectionSub);
+        setText('#ai-head-title', L.ai.headTitle);
+        setText('#ai-head-sub', L.ai.headSub);
+        setText('#ai-tip', L.ai.tip);
+        setText('#ai-hint', L.ai.hint);
+        const aiInput = document.getElementById('ai-input'); if(aiInput) aiInput.setAttribute('placeholder', L.ai.placeholder);
+        setText('#ai-send', L.ai.send);
+
+        setText('#srv-title', L.services.title);
+        setText('#srv-sub', L.services.sub);
+        setText('#t-1', L.services.tabs[0]); setText('#t-2', L.services.tabs[1]); setText('#t-3', L.services.tabs[2]); setText('#t-4', L.services.tabs[3]); setText('#t-5', L.services.tabs[4]);
+
+        setText('#cases-title', L.cases.title);
+        setText('#cases-sub', L.cases.sub);
+
+        setText('#contact-title', L.contact.title);
+        setText('#contact-sub', L.contact.sub);
+        setHTML('#f-name-l', L.contact.name + "<br>" + $('#f-name-l').innerHTML.split("<br>")[1]);
+        setHTML('#f-email-l', L.contact.email + "<br>" + $('#f-email-l').innerHTML.split("<br>")[1]);
+        setHTML('#f-phone-l', L.contact.phone + "<br>" + $('#f-phone-l').innerHTML.split("<br>")[1]);
+        setHTML('#f-msg-l', L.contact.msg + "<br>" + $('#f-msg-l').innerHTML.split("<br>")[1]);
+        setText('#f-submit', L.contact.send);
+        setText('#ct-whats', L.contact.whats);
+        setText('#ct-call', L.contact.call);
+        setText('#ct-mail', L.contact.mail);
+        setText('#ct-offices', L.contact.offices);
+        setText('#share', L.contact.share);
+        setText('#add-contact', L.contact.add);
+
+        setText('#legal', L.footer.legal);
+        setText('#rgpd', L.footer.rgpd);
+        setText('#fab-whatsapp', L.fab);
+
+        // Partage
+        if(shareBtn){
+          shareBtn.onclick = async (e)=>{
+            e.preventDefault();
+            const data={title: L.contact.shareData.title, text: L.contact.shareData.text, url: location.href};
+            if (navigator.share){ await navigator.share(data); } else {
+              await navigator.clipboard.writeText(location.href);
+              alert(lang==='fr' ? "Lien copié dans le presse-papiers !" : "Link copied to clipboard!");
+            }
+          };
+        }
+
+        // Chat: langue
+        window.__chat && window.__chat.setLang(lang);
+      }
+
+      const btnFR = document.getElementById('btn-fr');
+      const btnEN = document.getElementById('btn-en');
+      let lang = localStorage.getItem('site_lang') || 'fr';
+      applyLang(lang);
+      setPressed(lang);
+
+      btnFR.addEventListener('click', ()=>{ lang='fr'; localStorage.setItem('site_lang',lang); setPressed(lang); applyLang(lang); });
+      btnEN.addEventListener('click', ()=>{ lang='en'; localStorage.setItem('site_lang',lang); setPressed(lang); applyLang(lang); });
+
+      function setPressed(l){
+        document.documentElement.lang = l;
+        btnFR.setAttribute('aria-pressed', l==='fr' ? 'true':'false');
+        btnEN.setAttribute('aria-pressed', l==='en' ? 'true':'false');
+      }
+    })();
+  </script>
+
+  <!-- Formspree AJAX + UTM -->
+  <script>
+  (() => {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+    const msg = document.getElementById('contact-msg');
+    const btn = document.getElementById('f-submit');
+
+    function fillMeta() {
+      const p = new URLSearchParams(location.search);
+      form.elements['page_url'].value = location.href;
+      form.elements['referrer'].value = document.referrer || '';
+      ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(k=>{
+        form.elements[k].value = p.get(k) || '';
+      });
+    }
+    fillMeta();
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (form.elements['_gotcha'].value) { msg.textContent = "Merci, c'est noté."; return; }
+      btn.disabled = true; const old = btn.textContent; btn.textContent = 'Envoi…'; msg.textContent = '';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+        if (res.ok) {
+          form.reset(); fillMeta();
+          msg.textContent = 'Merci ! Nous revenons vers vous sous 24 h (ouvrées).';
+        } else {
+          const err = await res.json().catch(()=>({}));
+          msg.textContent = err?.error || "Oups, l’envoi n’a pas abouti. Écrivez à mistelgeehrt@gmail.com.";
+        }
+      } catch {
+        msg.textContent = "Réseau indisponible. Vérifiez votre connexion et réessayez.";
+      } finally {
+        btn.disabled = false; btn.textContent = old;
+      }
+    });
+  })();
+  </script>
+
+  <!-- FIX accents global (inclut <title> + attributs) -->
+  <script>
+  (function(){
+    const ATTRS = ['placeholder','title','alt','aria-label','aria-description','aria-valuetext'];
+
+    function decodeHTMLString(s){
+      if(!s || s.indexOf('&') === -1 || s.indexOf(';') === -1) return s;
+      const ta = document.createElement('textarea'); ta.innerHTML = s; return ta.value;
+    }
+    function decodeTextNodes(root){
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
+      const ta = document.createElement('textarea'); let n;
+      while(n = walker.nextNode()){
+        const v = n.nodeValue;
+        if(v && v.includes('&') && v.includes(';')){
+          ta.innerHTML = v; const dec = ta.value; if(dec !== v) n.nodeValue = dec;
+        }
+      }
+    }
+    function decodeAttrs(el){
+      for(const a of ATTRS){
+        if(el.hasAttribute && el.hasAttribute(a)){
+          const v = el.getAttribute(a);
+          const dec = decodeHTMLString(v);
+          if(dec !== v) el.setAttribute(a, dec);
+        }
+      }
+    }
+
+    // Titre & metas
+    document.title = decodeHTMLString(document.title);
+    document.querySelectorAll('meta[name="description"],meta[property="og:title"],meta[property="og:description"],meta[name="twitter:title"],meta[name="twitter:description"]')
+      .forEach(meta => { const v = meta.getAttribute('content'); const dec = decodeHTMLString(v); if(dec !== v) meta.setAttribute('content', dec); });
+
+    // Corps (texte + attributs)
+    decodeTextNodes(document.body);
+    document.querySelectorAll('*').forEach(decodeAttrs);
+
+    // Surveiller ajouts et changements d’attributs
+    new MutationObserver(muts=>{
+      for(const m of muts){
+        if(m.type === 'childList'){
+          m.addedNodes.forEach(node=>{
+            if(node.nodeType === 3){ // texte
+              const dec = decodeHTMLString(node.nodeValue);
+              if(dec !== node.nodeValue) node.nodeValue = dec;
+            } else if(node.nodeType === 1){
+              decodeTextNodes(node);
+              decodeAttrs(node);
+              node.querySelectorAll && node.querySelectorAll('*').forEach(decodeAttrs);
+            }
+          });
+        } else if(m.type === 'attributes' && ATTRS.includes(m.attributeName)){
+          decodeAttrs(m.target);
+        }
+      }
+    }).observe(document.documentElement, {subtree:true, childList:true, attributes:true, attributeFilter:ATTRS});
+  })();
+  </script>
+</body>
+</html>
