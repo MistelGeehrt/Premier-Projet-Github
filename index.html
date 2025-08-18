@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mistel Geehrt – Automatisation & IA qui font vendre</title>
+<meta name="description" content="Automatisations sur mesure, assistants IA, social media et sites WordPress. 140+ clients, 60+ automatisations, réponse < 24 h. Demandez votre devis.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://mistelgeehrt.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mistelgeehrt.com/">
+<meta property="og:title" content="Mistel Geehrt – Automatisation & IA qui font vendre">
+<meta property="og:description" content="Automatisations sur mesure, assistants IA, social media et sites WordPress. 140+ clients, 60+ automatisations, réponse < 24 h.">
+<meta property="og:image" content="PLACEHOLDER_OG_IMAGE_URL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mistel Geehrt – Automatisation & IA qui font vendre">
+<meta name="twitter:description" content="Automatisations sur mesure, assistants IA, social media et sites WordPress. 140+ clients, 60+ automatisations, réponse < 24 h.">
+<meta name="twitter:image" content="PLACEHOLDER_TW_IMAGE_URL">
+
+<style>
+  /* ============ Thème clair premium + responsive solide ============ */
+  :root{
+    --bg:#F7FBFF; --surface:#FFFFFF; --line:rgba(9,32,77,.10);
+    --text:#0B1220; --muted:#475569;
+    --brand1:#1FA2FF; --brand2:#12D8FA; --brand3:#A6FFCB;
+    --ok:#2ecc71; --shadow:0 12px 40px rgba(2,12,32,.08); --radius:18px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Helvetica Neue",sans-serif;
+    color:var(--text);
+    background:
+      radial-gradient(1200px 600px at 10% -10%, rgba(31,162,255,.20) 0%, transparent 60%),
+      radial-gradient(900px 500px at 90% 10%, rgba(18,216,250,.18) 0%, transparent 55%),
+      conic-gradient(from 220deg at 70% -20%, rgba(166,255,203,.18), rgba(18,216,250,.12), rgba(255,255,255,0)),
+      var(--bg);
+    -webkit-tap-highlight-color: transparent;
+  }
+  a{color:#0b3a84;text-decoration:none}
+  a:hover{color:#072a62;text-decoration:underline}
+  .container{width:min(1200px, 92vw); margin-inline:auto}
+  section{padding: clamp(56px, 8vw, 80px) 0; scroll-margin-top: 84px;} /* anchor offset */
+
+  /* Skip link */
+  .skip{position:absolute;left:-9999px}
+  .skip:focus{left:6px;top:6px;background:#fff;padding:.5rem 1rem;border-radius:10px;z-index:1000}
+
+  /* ===== NAV verre clair ===== */
+  header.nav{
+    position:sticky; top:0; z-index:40; backdrop-filter:saturate(140%) blur(8px);
+    background:linear-gradient(90deg,rgba(255,255,255,.75),rgba(255,255,255,.55));
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+  .brand{display:flex;align-items:center;gap:.7rem;font-weight:800;letter-spacing:.2px;color:#0b1d38;position:relative}
+  .brand-logo{width:34px;height:34px;border-radius:9px;position:relative;overflow:hidden}
+  .brand-logo::before{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(135deg,var(--brand1),var(--brand2) 40%,var(--brand3));
+    filter:saturate(120%) contrast(105%);
+  }
+  /* Glow doux logo */
+  .brand-logo::after{
+    content:""; position:absolute; inset:-30%; background:radial-gradient(closest-side, rgba(255,255,255,.55), transparent 60%);
+    animation:logoGlow 3.6s ease-in-out infinite;
+  }
+  @keyframes logoGlow{ 0%,100%{transform:translate(0,0)} 50%{transform:translate(10%, -8%)} }
+
+  .nav a{color:#0b1d38;font-weight:700;margin-left:1rem;padding:.45rem .7rem;border-radius:10px}
+  .nav a:hover{background:rgba(11,29,56,.06);text-decoration:none}
+
+  /* ===== HERO clair, sans troncature desktop ===== */
+  .hero{
+    position:relative; isolation:isolate;
+    background:
+      radial-gradient(1000px 700px at 20% -20%, rgba(31,162,255,.22) 0%, rgba(255,255,255,0) 60%),
+      radial-gradient(800px 600px at 100% 0%, rgba(18,216,250,.18) 0%, rgba(255,255,255,0) 58%),
+      linear-gradient(180deg,#FFFFFF 0%,#F7FBFF 100%);
+    border-bottom:1px solid var(--line);
+    padding: clamp(64px, 8vw, 110px) 0 clamp(52px, 7vw, 72px);
+    overflow: visible; /* => pas de contenu coupé */
+  }
+  .hero-blob{
+    pointer-events:none; position:absolute; right:-20vw; bottom:-45vw; width:85vw; height:85vw; max-width:1000px;
+    filter: blur(70px); opacity:.25;
+    background:conic-gradient(from 200deg, var(--brand1), var(--brand2), var(--brand3), var(--brand1));
+    animation:spin 30s linear infinite;
+    z-index:-1;
+  }
+  /* Balayage lumineux subtil (effet "shine") */
+  .hero::after{
+    content:""; pointer-events:none; position:absolute; inset:-15% -25%;
+    background:linear-gradient(120deg, transparent 45%, rgba(255,255,255,.35) 50%, transparent 55%);
+    transform: translateX(-120%); mix-blend-mode: screen; opacity:.7;
+    animation:sheen 9s ease-in-out infinite;
+  }
+  @keyframes spin{to{transform:rotate(1turn)}}
+  @keyframes sheen{ 0%{transform:translateX(-120%)} 55%,100%{transform:translateX(120%)} }
+
+  .hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}
+  @media (max-width:1000px){ .hero-inner{grid-template-columns:1fr} }
+
+  .kicker{color:#0b3a84;font-weight:800;letter-spacing:.15em;text-transform:uppercase;font-size:.78rem}
+  h1{margin:.35rem 0 0; font-size: clamp(32px, 5vw, 54px); line-height:1.06}
+  .hero-sub{color:#334155; font-size: clamp(16px, 2.1vw, 19px); opacity:.95; margin:.8rem 0 1.4rem}
+  .cta-wrap{display:flex;gap:.8rem;flex-wrap:wrap}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+    padding:.9rem 1.1rem;border-radius:14px;font-weight:800;border:1px solid var(--line);
+    background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(255,255,255,.6));
+    box-shadow:var(--shadow);color:#0b1d38; position:relative; overflow:hidden;
+  }
+  .btn-primary{color:#0b1220;background:linear-gradient(135deg,var(--brand1),var(--brand2) 40%,var(--brand3));border:0}
+  /* Sheen sur boutons */
+  .btn::after{
+    content:""; position:absolute; inset:-40% -80% -40% -80%; transform:skewX(-20deg) translateX(-120%);
+    background: linear-gradient(90deg, transparent 30%, rgba(255,255,255,.75) 50%, transparent 70%);
+    animation:btnSheen 3.2s ease-in-out infinite;
+  }
+  @keyframes btnSheen{ 0%{transform:skewX(-20deg) translateX(-120%)} 60%{transform:skewX(-20deg) translateX(120%)} 100%{transform:skewX(-20deg) translateX(120%)} }
+
+  .hero-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:20px; text-align:center; box-shadow:var(--shadow);
+    position:relative; overflow:hidden;
+  }
+  .hero-img{
+    width:100%; height: clamp(220px, 30vw, 360px); border-radius:14px; object-fit:cover;
+    background:linear-gradient(135deg,rgba(31,162,255,.25),rgba(18,216,250,.2),rgba(166,255,203,.25));
+    box-shadow:var(--shadow)
+  }
+
+  /* ===== Stats ===== */
+  .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:26px}
+  @media (max-width:960px){.stats{grid-template-columns:repeat(2,1fr)}}
+  .stat{background:var(--surface);border:1px solid var(--line);padding:16px;border-radius:16px;text-align:center;box-shadow:var(--shadow); position:relative}
+  .stat .n{font-size: clamp(22px, 4.3vw, 34px); font-weight:900}
+  .stat .l{color:#334155; font-weight:700; font-size:.95rem}
+  /* Liseré animé premium autour des stats (progressive enhancement) */
+  .stat::before{
+    content:""; position:absolute; inset:-1px; border-radius:16px;
+    background: conic-gradient(from 0turn, rgba(31,162,255,.8), rgba(18,216,250,.8), rgba(166,255,203,.8), rgba(31,162,255,.8));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); 
+    -webkit-mask-composite: xor; mask-composite: exclude; padding:1px; z-index:-1;
+    animation:borderSpin 10s linear infinite;
+  }
+  @keyframes borderSpin{ to{ transform: rotate(1turn) } }
+
+  /* ===== Sections ===== */
+  h2{font-size: clamp(26px, 3.6vw, 38px); margin:0 0 18px}
+  .lead{color:#334155; max-width:68ch}
+  .center{text-align:center}
+  .muted{color:var(--muted)}
+
+  /* ===== Onglets Services ===== */
+  .tablist{display:flex;flex-wrap:wrap;gap:.6rem;margin:18px 0 20px}
+  .tab{padding:.6rem .9rem;border-radius:999px;border:1px solid var(--line);background:#F3F7FF;color:#0b1d38;font-weight:800;cursor:pointer}
+  .tab[aria-selected="true"]{background:linear-gradient(135deg,var(--brand1),var(--brand2));color:#0b1220;border-color:transparent}
+  .panel{display:none;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+  .panel.active{display:block}
+  .panel h3{margin-top:0}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+  .grid{display:grid;gap:18px}
+  .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+  .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+  @media (max-width:960px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
+  .case a{display:inline-flex;align-items:center;gap:.5rem;font-weight:800}
+  .sep{height:1px;background:var(--line);margin:28px 0}
+
+  /* ===== Footer & FAB ===== */
+  footer{padding:36px 0 66px;background:linear-gradient(0deg,#FFFFFF,#F7FBFF);border-top:1px solid var(--line)}
+  .social a{margin-right:.7rem;display:inline-flex;width:40px;height:40px;border-radius:12px;align-items:center;justify-content:center;background:#F3F7FF;border:1px solid var(--line);color:#0b1d38}
+  .whatsapp-fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:50;background:#22c55e;color:#041015;font-weight:900;border-radius:999px;padding:.85rem 1rem;box-shadow:var(--shadow)}
+
+  /* ===== Accessibilité motion ===== */
+  @media (prefers-reduced-motion: reduce){
+    .hero-blob, .hero::after, .btn::after, .stat::before{ animation: none !important }
+    .btn:hover{ transform:none }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <div class="brand"><span class="brand-logo" aria-hidden="true"></span> <span>Mistel Geehrt</span></div>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#services">Services</a>
+      <a href="#cas">Cas clients</a>
+      <a href="#temoignages">Avis</a>
+      <a href="#insights">Data & Insights</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-blob" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <div>
+      <div class="kicker">Automatisation • IA • Community</div>
+      <h1>Moins de tâches, plus de ventes : on automatise, vous respirez.</h1>
+      <p class="hero-sub">Solutions sur mesure : automatisations, assistants IA, social media & sites WordPress. On simplifie vos process, vous vous concentrez sur la croissance.</p>
+      <div class="cta-wrap">
+        <a href="#contact" class="btn btn-primary">Demander un devis</a>
+        <a href="https://wa.me/237675800721" class="btn">Parler sur WhatsApp</a>
+        <a href="#cas" class="btn">Voir nos cas clients</a>
+      </div>
+
+      <div class="stats" aria-label="Chiffres clés">
+        <div class="stat"><div class="n" data-count="140">0</div><div class="l">Clients accompagnés</div></div>
+        <div class="stat"><div class="n" data-count="60">0</div><div class="l">Automatisations livrées</div></div>
+        <div class="stat"><div class="n" data-count="220">0</div><div class="l">Contrats honorés</div></div>
+        <div class="stat"><div class="n">4,8/5</div><div class="l">Satisfaction</div></div>
+        <div class="stat"><div class="n">&lt; 24 h</div><div class="l">Délai moyen de réponse</div></div>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <img class="hero-img" alt="Illustration abstraite IA & automatisation" src="data:image/svg+xml;utf8,<?xml version='1.0'?><svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%231FA2FF'/><stop offset='0.5' stop-color='%2312D8FA'/><stop offset='1' stop-color='%23A6FFCB'/></linearGradient></defs><rect width='100%' height='100%' fill='%23FFFFFF'/><circle cx='300' cy='300' r='220' fill='url(%23g)' opacity='0.35'/><circle cx='820' cy='420' r='240' fill='url(%23g)' opacity='0.28'/><circle cx='560' cy='200' r='160' fill='url(%23g)' opacity='0.22'/></svg>">
+      <p class="muted">Ambiance claire, premium. Animations légères et images optimisées.</p>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+  <!-- Chatbot -->
+  <section class="container" id="chatbot">
+    <h2>Assistant IA</h2>
+    <p class="lead">Posez vos questions : notre assistant IA répond en temps réel. <span class="muted">Intégration via Make.com &amp; API OpenAI.</span></p>
+    <div id="chatbot-widget" class="card" style="min-height:200px;display:grid;place-items:center">
+      <em>Collez ici le script d’intégration Make / OpenAI.</em>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="container">
+    <h2>Services</h2>
+    <p class="lead">Cinq piliers pour accélérer votre business — clairs, mesurables, orientés résultat.</p>
+    <div class="tablist" role="tablist" aria-label="Onglets services">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p-1" id="t-1">Automatisation</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-2" id="t-2">Intelligence Artificielle</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-3" id="t-3">Community Management</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-4" id="t-4">Infographie & Design</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-5" id="t-5">Sites Web</button>
+    </div>
+
+    <div id="p-1" class="panel active" role="tabpanel" aria-labelledby="t-1">
+      <h3>Automatisation des processus</h3>
+      <ul>
+        <li><strong>Audit express</strong> : cartographie des workflows, suppression des frictions.</li>
+        <li><strong>Intégrations CRM & messages</strong> : WhatsApp, email, réseaux — zéro lead perdu.</li>
+        <li><strong>Reporting auto</strong> : dashboards en temps réel pour décider vite.</li>
+        <li><strong>Formation</strong> : adoption rapide sans jargon.</li>
+      </ul>
+    </div>
+
+    <div id="p-2" class="panel" role="tabpanel" aria-labelledby="t-2">
+      <h3>Intelligence Artificielle appliquée</h3>
+      <ul>
+        <li><strong>Assistants IA</strong> connectés à vos données pour répondre 24/7.</li>
+        <li><strong>Copilotes internes</strong> : procédures, Q/R, recherches → réponses utiles.</li>
+        <li><strong>Contenu assisté par IA</strong> : drafts, scripts vidéo, publicités — sous contrôle humain.</li>
+        <li><strong>Prototypage</strong> : MVP d’agent IA en jours, pas en mois.</li>
+      </ul>
+    </div>
+
+    <div id="p-3" class="panel" role="tabpanel" aria-labelledby="t-3">
+      <h3>Community Management</h3>
+      <ul>
+        <li><strong>Calendrier éditorial</strong> multi-plateforme (FB, IG, LinkedIn, X).</li>
+        <li><strong>Contenus qui convertissent</strong> : carrousels, réels/shorts, stories, UGC.</li>
+        <li><strong>Modération & social care</strong> : réponses rapides, ton de marque cohérent.</li>
+        <li><strong>KPIs lisibles</strong> : croissance audience, engagement, leads.</li>
+      </ul>
+    </div>
+
+    <div id="p-4" class="panel" role="tabpanel" aria-labelledby="t-4">
+      <h3>Infographie & Design</h3>
+      <ul>
+        <li><strong>Identités visuelles</strong> qui racontent votre histoire.</li>
+        <li><strong>Carrousels & infographies</strong> pédagogiques et partageables.</li>
+        <li><strong>Templates réutilisables</strong> pour votre équipe.</li>
+        <li><strong>Visuels publicitaires</strong> adaptés aux plateformes.</li>
+      </ul>
+    </div>
+
+    <div id="p-5" class="panel" role="tabpanel" aria-labelledby="t-5">
+      <h3>Sites Web</h3>
+      <ul>
+        <li><strong>WordPress premium</strong> : vitrines & landing pages rapides, sécurisées.</li>
+        <li><strong>SEO on-page</strong> : structure, métas, schémas.</li>
+        <li><strong>Performances</strong> : images optimisées, scripts légers, UX fluide.</li>
+        <li><strong>Maintenance</strong> & support pro.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Cas clients -->
+  <section id="cas" class="container">
+    <h2>Cas clients</h2>
+    <p class="lead">De l’audit à l’exécution : exemples concrets — résultats clairs, délais tenus.</p>
+    <div class="grid cols-3">
+      <article class="card case">
+        <h3>E-commerce (mode) – Douala</h3>
+        <p>Panier abandonné & SAV saturé → <strong>WhatsApp CRM + bot FAQ</strong>. Résultat : <strong>+22 % ventes</strong>, <strong>−35 % tickets</strong> en 60 jours.</p>
+        <a href="cas-ecommerce-mode-douala.html">Lire l’étude</a>
+      </article>
+      <article class="card case">
+        <h3>Éducation en ligne – Yaoundé</h3>
+        <p>Inscriptions manuelles → <strong>funnels automatisés</strong> + e-mails. Résultat : <strong>+31 % inscrits</strong>, <strong>−50 % temps admin</strong>.</p>
+        <a href="cas-education-yaounde.html">Lire l’étude</a>
+      </article>
+      <article class="card case">
+        <h3>Immobilier – Toulon</h3>
+        <p>Demande de visites lente → <strong>formulaires + routage auto</strong>. Résultat : <strong>−46 % délai de prise de contact</strong>.</p>
+        <a href="cas-immobilier-toulon.html">Lire l’étude</a>
+      </article>
+      <article class="card case">
+        <h3>Restauration – Douala</h3>
+        <p>Flux commandes éparpillés → <strong>centralisation WhatsApp/IG</strong>. Résultat : <strong>+18 % CA</strong> week-ends.</p>
+        <a href="cas-restauration-douala.html">Lire l’étude</a>
+      </article>
+      <article class="card case">
+        <h3>ONG – Littoral</h3>
+        <p>Reporting projet lourd → <strong>dashboards automatiques</strong>. Résultat : <strong>−60 % temps de reporting</strong>.</p>
+        <a href="cas-ong-littoral.html">Lire l’étude</a>
+      </article>
+      <article class="card case">
+        <h3>Service B2B – France</h3>
+        <p>Prospection froide → <strong>séquences multicanales</strong>. Résultat : <strong>+25 % RDV</strong> en 45 jours.</p>
+        <a href="cas-b2b-france.html">Lire l’étude</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Data & Insights (We Are Social) -->
+  <section id="insights" class="container">
+    <h2>Data & Insights – Cameroun</h2>
+    <div class="card">
+      <h3>Analyse du marché digital au Cameroun – 2025 (We Are Social)</h3>
+      <p class="muted">Synthèse mise à jour chaque année à partir des rapports We Are Social / DataReportal.</p>
+      <div class="cta-wrap">
+        <a class="btn btn-primary" href="analyse-marche-digital-cameroun-2025.html">Lire la synthèse 2025</a>
+        <a class="btn" href="https://datareportal.com/reports/digital-2025-cameroon" target="_blank" rel="noopener">Voir l’étude source 2025</a>
+      </div>
+      <div class="sep"></div>
+      <p>Archives :</p>
+      <ul>
+        <li><a href="https://datareportal.com/reports/digital-2024-cameroon" target="_blank" rel="noopener">Digital 2024 – Cameroun</a></li>
+        <li><a href="https://datareportal.com/reports/digital-2023-cameroon" target="_blank" rel="noopener">Digital 2023 – Cameroun</a></li>
+        <li><a href="https://datareportal.com/reports/digital-2022-cameroon" target="_blank" rel="noopener">Digital 2022 – Cameroun</a></li>
+        <li><a href="https://datareportal.com/reports/digital-2021-cameroon" target="_blank" rel="noopener">Digital 2021 – Cameroun</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Avis -->
+  <section id="temoignages" class="container">
+    <h2>Avis clients</h2>
+    <div class="grid cols-2">
+      <blockquote class="card">« On a enfin un process qui roule. En 3 semaines, on a gagné des heures et des ventes. » <br><strong>— S., fondatrice e-commerce</strong></blockquote>
+      <blockquote class="card">« Le bot répond 24/7, l’équipe respire. La satisfaction grimpe, et ça s’entend au support. » <br><strong>— M., resp. service client</strong></blockquote>
+      <blockquote class="card">« Plan éditorial carré, reporting limpide : on sait ce qui marche et pourquoi. » <br><strong>— A., dir. marketing B2B</strong></blockquote>
+      <blockquote class="card">« Site rapide, SEO propre : nos demandes explosent. » <br><strong>— J., agence immo</strong></blockquote>
+    </div>
+  </section>
+
+  <!-- Formations -->
+  <section class="container center">
+    <h2>Formations</h2>
+    <p class="lead">Apprenez nos méthodes pas à pas : automatisation, IA, contenu, sites.</p>
+    <a class="btn btn-primary" href="https://mistelgeehrt.com/les-editions-mistel-geehrt/" target="_blank" rel="noopener">Voir nos programmes</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container">
+    <h2>Contact</h2>
+    <div class="grid cols-2">
+      <form class="card" action="PLACEHOLDER_FORMSPREE_OR_NETLIFY_URL" method="post">
+        <label>Votre nom<br><input name="name" required style="width:100%;padding:.7rem;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--text)"></label><br>
+        <label>Email<br><input type="email" name="email" required style="width:100%;padding:.7rem;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--text)"></label><br>
+        <label>Téléphone<br><input name="phone" style="width:100%;padding:.7rem;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--text)"></label><br>
+        <label>Votre demande<br><textarea name="message" rows="5" required style="width:100%;padding:.7rem;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--text)"></textarea></label>
+        <input type="hidden" name="_subject" value="Demande depuis le site Mistel Geehrt">
+        <button class="btn btn-primary" type="submit">Envoyer</button>
+      </form>
+      <div class="card">
+        <p><strong>WhatsApp</strong> : <a href="https://wa.me/237675800721">+237 675 800 721</a><br>
+           <strong>Appeler</strong> : <a href="tel:+237675800721">+237 675 800 721</a><br>
+           <strong>Email</strong> : <a href="mailto:mistelgeehrt@gmail.com">mistelgeehrt@gmail.com</a></p>
+        <p class="muted">Bureaux : Toulon, France • Douala, Cameroun</p>
+        <div class="cta-wrap">
+          <a class="btn" href="#" id="share">Partager ce site</a>
+          <a class="btn" download href="PLACEHOLDER_VCARD_URL">Ajouter à mes contacts</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="grid cols-2">
+      <div>
+        <div class="brand" style="margin-bottom:.6rem"><span class="brand-logo"></span><span>Mistel Geehrt</span></div>
+        <p class="muted">© <span id="y"></span> Mistel Geehrt Management. Tous droits réservés.</p>
+        <p class="muted"><a href="#">Mentions légales</a> · <a href="#">Politique RGPD</a></p>
+      </div>
+      <div class="social" aria-label="Réseaux sociaux">
+        <a href="https://www.facebook.com/profile.php?id=61557460662989&mibextid=ZbWKwL" aria-label="Facebook">FB</a>
+        <a href="https://x.com/mistelgeehrt?t=aQh8y4dSKebEWofqNQ3abw&s=09" aria-label="X">X</a>
+        <a href="https://www.instagram.com/mistelgeehrtofficial?igsh=YzljYTk1ODg3Zg==" aria-label="Instagram">IG</a>
+        <a href="https://www.linkedin.com/company/mistel-geehrt/" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-fab" href="https://wa.me/237675800721">WhatsApp</a>
+
+<!-- JSON-LD (Organization + WebSite + FAQ) -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"Organization","name":"Mistel Geehrt Management","url":"https://mistelgeehrt.com/","logo":"PLACEHOLDER_ORG_LOGO_URL",
+   "sameAs":["https://www.facebook.com/profile.php?id=61557460662989","https://x.com/mistelgeehrt","https://www.instagram.com/mistelgeehrtofficial","https://www.linkedin.com/company/mistel-geehrt/"],
+   "contactPoint":[{"@type":"ContactPoint","telephone":"+237675800721","contactType":"customer support","areaServed":"CM,FR","availableLanguage":["fr"]}],
+   "address":[{"@type":"PostalAddress","addressLocality":"Toulon","addressCountry":"FR"},{"@type":"PostalAddress","addressLocality":"Douala","addressCountry":"CM"}]},
+  {"@type":"WebSite","url":"https://mistelgeehrt.com/","name":"Mistel Geehrt",
+   "potentialAction":{"@type":"SearchAction","target":"https://mistelgeehrt.com/?s={search_term_string}","query-input":"required name=search_term_string"}},
+  {"@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"En combien de temps livrez-vous une automatisation ?","acceptedAnswer":{"@type":"Answer","text":"L’audit démarre sous 48 h, un premier scénario simple peut être livré en quelques jours. Nous priorisons l’impact et la sécurité."}},
+    {"@type":"Question","name":"L’IA remplace-t-elle mon équipe ?","acceptedAnswer":{"@type":"Answer","text":"Non. Nous créons des assistants pour épauler vos équipes : réponses plus rapides, moins de tâches répétitives, et validation humaine quand c’est nécessaire."}},
+    {"@type":"Question","name":"Proposez-vous la maintenance ?","acceptedAnswer":{"@type":"Answer","text":"Oui, nous assurons mises à jour, sauvegardes, monitoring et optimisation continue pour garder vos outils fiables et rapides."}}
+  ]}
+]}
+</script>
+
+<script>
+  // Année courante
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // Partage
+  document.getElementById('share').addEventListener('click', async (e)=>{
+    e.preventDefault();
+    const data={ title:'Mistel Geehrt', text:'Automatisation & IA qui font vendre', url:location.href };
+    if (navigator.share){ await navigator.share(data); } else {
+      await navigator.clipboard.writeText(location.href);
+      alert("Lien copié !");
+    }
+  });
+
+  // Onglets Services
+  const tabs = Array.from(document.querySelectorAll('.tablist .tab'));
+  const panels = Array.from(document.querySelectorAll('.panel'));
+  function activateTab(idx){
+    tabs.forEach((t,i)=> t.setAttribute('aria-selected', i===idx));
+    panels.forEach((p,i)=> p.classList.toggle('active', i===idx));
+    tabs[idx].focus();
+  }
+  tabs.forEach((t,i)=> t.addEventListener('click', ()=>activateTab(i)));
+  document.querySelector('.tablist').addEventListener('keydown', (e)=>{
+    const i=tabs.indexOf(document.activeElement); if(i<0) return;
+    if(e.key==='ArrowRight') activateTab((i+1)%tabs.length);
+    if(e.key==='ArrowLeft')  activateTab((i-1+tabs.length)%tabs.length);
+  });
+
+  // Compteurs (IntersectionObserver)
+  function animateCount(el, target, dur=1400){
+    const start=0, st=performance.now();
+    function tick(now){ const p=Math.min((now-st)/dur,1); el.textContent=Math.floor(start+(target-start)*p)+'+'; if(p<1) requestAnimationFrame(tick); }
+    requestAnimationFrame(tick);
+  }
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.querySelectorAll('[data-count]').forEach(n=> animateCount(n, parseInt(n.dataset.count,10)));
+        io.disconnect();
+      }
+    });
+  },{threshold:.35});
+  io.observe(document.querySelector('.stats'));
+</script>
+</body>
+</html>
